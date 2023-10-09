@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Net;
 using TourOfHeroes.Backend.Data.Repositories.Interfaces;
 using TourOfHeroes.Backend.Entities;
 
@@ -20,39 +21,50 @@ public class HeroesController : ControllerBase
     }
 
     [HttpGet]
+    [ProducesResponseType(typeof(IEnumerable<Hero>), (int)HttpStatusCode.OK)]
     public IActionResult GetAllHeroes()
     {
         return Ok(_heroRepository.GetAll());
     }
 
-    [HttpGet("Types")]
-    public IActionResult GetAllHeroTypes()
-    {
-        return Ok(new List<HeroType>());
-    }
 
     [HttpGet("{id:int}")]
+    [ProducesResponseType(typeof(Hero), (int)HttpStatusCode.OK)]
     public IActionResult GetHero(int id)
     {
-        return Ok(new Hero() { Id = id, Name = "pending", Type = new HeroType() { Name = "pending" } });
+        return Ok(_heroRepository.GetById(id));
     }
 
     [HttpPost]
+    [ProducesResponseType(typeof(Hero), (int)HttpStatusCode.Created)]
     public IActionResult CreateHero([FromBody] Hero hero)
     {
-        return Created("TODO", hero);
+        //TODO 
+        //Data validation
+        return Created("TODO", _heroRepository.Create(hero));
     }
 
     [HttpPut("{id:int}")]
+    [ProducesResponseType(typeof(Hero), (int)HttpStatusCode.OK)]
     public IActionResult UpdateHero(int id, [FromBody] Hero hero)
     {
-        return Ok(hero);
+        //TODO 
+        //Data validation
+        return Ok(_heroRepository.Update(hero));
+    }
+
+    [HttpDelete("{id:int}")]
+    [ProducesResponseType(typeof(int), (int)HttpStatusCode.OK)]
+    public IActionResult DeleteHero(int id)
+    {
+        return Ok(_heroRepository.Delete(id));
     }
 
 
-    [HttpDelete("{id:int}")]
-    public IActionResult DeleteHero(int id)
+    [HttpGet("Types")]
+    [ProducesResponseType(typeof(IEnumerable<HeroType>), (int)HttpStatusCode.OK)]
+    public IActionResult GetAllHeroTypes()
     {
-        return Ok(id);
+        return Ok(new List<HeroType>()); //TODO
     }
 }

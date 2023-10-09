@@ -1,1 +1,6 @@
+
+#File pending
+
+#command to run for creating dev SQL Server
+
 ### docker run --name dev_sqlserver -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=StrongPass123###' -p 1433:1433 -v D:/Temp/data:/var/opt/mssql/data -d mcr.microsoft.com/mssql/server:2022-latest

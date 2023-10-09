@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TourOfHeroes.Backend.Entiti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TourOfHeroes.Backend.Data", "TourOfHeroes.Backend.Data\TourOfHeroes.Backend.Data.csproj", "{A6FCE9C8-EC28-4AA2-9518-20B4087E31C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TourOfHeroes.Backend.Tests", "TourOfHeroes.Backend.Tests\TourOfHeroes.Backend.Tests.csproj", "{A25D3646-60C1-4803-AC47-F6DB9ADDA55B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TourOfHeroes.Backend.Tests", "TourOfHeroes.Backend.Tests\TourOfHeroes.Backend.Tests.csproj", "{A25D3646-60C1-4803-AC47-F6DB9ADDA55B}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "TourOfHeroes.Backend.Sql", "TourOfHeroes.Backend.Sql\TourOfHeroes.Backend.Sql.sqlproj", "{8976A7B8-09BC-4037-B33E-CAD62FB4562C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,12 @@ Global
 		{A25D3646-60C1-4803-AC47-F6DB9ADDA55B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A25D3646-60C1-4803-AC47-F6DB9ADDA55B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A25D3646-60C1-4803-AC47-F6DB9ADDA55B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8976A7B8-09BC-4037-B33E-CAD62FB4562C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8976A7B8-09BC-4037-B33E-CAD62FB4562C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8976A7B8-09BC-4037-B33E-CAD62FB4562C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8976A7B8-09BC-4037-B33E-CAD62FB4562C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8976A7B8-09BC-4037-B33E-CAD62FB4562C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8976A7B8-09BC-4037-B33E-CAD62FB4562C}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

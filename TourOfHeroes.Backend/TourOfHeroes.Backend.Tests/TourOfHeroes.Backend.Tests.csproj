@@ -24,6 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TourOfHeroes.Backend.API\TourOfHeroes.Backend.API.csproj" />
     <ProjectReference Include="..\TourOfHeroes.Backend.Data\TourOfHeroes.Backend.Data.csproj" />
   </ItemGroup>
 

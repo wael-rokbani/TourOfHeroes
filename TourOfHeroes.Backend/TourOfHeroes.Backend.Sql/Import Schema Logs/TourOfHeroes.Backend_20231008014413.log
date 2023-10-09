@@ -1,0 +1,88 @@
+08/10/2023 15:44:13	This log contains information about the import schema operation into project 'TourOfHeroes.Backend.Sql' on computer 'DESKTOP-SA0FKRQ' by user 'FRMK-WIN-WRO'.
+08/10/2023 15:44:13	Import of database schema has started.
+08/10/2023 15:44:19	Gathering database credentials
+08/10/2023 15:44:19	Gathering database options
+08/10/2023 15:44:19	Gathering generic database scoped configuration option
+08/10/2023 15:44:19	Gathering users
+08/10/2023 15:44:19	Gathering roles
+08/10/2023 15:44:19	Gathering application roles
+08/10/2023 15:44:19	Gathering role memberships
+08/10/2023 15:44:19	Gathering filegroups
+08/10/2023 15:44:19	Gathering full-text catalogs
+08/10/2023 15:44:19	Gathering assemblies
+08/10/2023 15:44:19	Gathering certificates
+08/10/2023 15:44:19	Gathering asymmetric keys
+08/10/2023 15:44:19	Gathering symmetric keys
+08/10/2023 15:44:19	Gathering encrypted symmetric keys
+08/10/2023 15:44:19	Gathering schemas
+08/10/2023 15:44:19	Gathering XML schema collections
+08/10/2023 15:44:19	Gathering user-defined data types
+08/10/2023 15:44:19	Gathering user-defined types
+08/10/2023 15:44:19	Gathering table types
+08/10/2023 15:44:19	Gathering unique keys for table types
+08/10/2023 15:44:19	Gathering primary keys for table types
+08/10/2023 15:44:19	Gathering indexes for table types
+08/10/2023 15:44:19	Gathering check constraints for table types
+08/10/2023 15:44:19	Gathering default constraints for table types
+08/10/2023 15:44:19	Gathering partition functions
+08/10/2023 15:44:19	Gathering partition schemes
+08/10/2023 15:44:19	Gathering functions
+08/10/2023 15:44:19	Gathering encrypted functions
+08/10/2023 15:44:19	Gathering aggregates
+08/10/2023 15:44:19	Gathering procedures
+08/10/2023 15:44:19	Gathering encrypted procedures
+08/10/2023 15:44:19	Gathering tables
+08/10/2023 15:44:19	Gathering primary keys
+08/10/2023 15:44:19	Gathering unique constraints
+08/10/2023 15:44:19	Gathering foreign keys
+08/10/2023 15:44:19	Gathering default constraints
+08/10/2023 15:44:19	Gathering check constraints
+08/10/2023 15:44:19	Gathering views
+08/10/2023 15:44:19	Gathering encrypted views
+08/10/2023 15:44:19	Gathering indexes
+08/10/2023 15:44:19	Gathering statistics
+08/10/2023 15:44:19	Gathering full-text index stoplists
+08/10/2023 15:44:19	Gathering search property lists
+08/10/2023 15:44:19	Gathering search properties
+08/10/2023 15:44:19	Gathering full-text indexes
+08/10/2023 15:44:19	Gathering column store indexes
+08/10/2023 15:44:19	Gathering spatial indexes
+08/10/2023 15:44:19	Gathering XML indexes
+08/10/2023 15:44:19	Gathering Selective XML indexes
+08/10/2023 15:44:19	Gathering encrypted triggers
+08/10/2023 15:44:19	Gathering triggers
+08/10/2023 15:44:19	Gathering encrypted and clr ddl triggers
+08/10/2023 15:44:19	Gathering ddl triggers
+08/10/2023 15:44:19	Creating edge constraints
+08/10/2023 15:44:19	Gathering synonyms
+08/10/2023 15:44:19	Gathering defaults
+08/10/2023 15:44:19	Gathering data constraint uddt bindings
+08/10/2023 15:44:19	Gathering rules
+08/10/2023 15:44:19	Gathering data constraint uddt bindings
+08/10/2023 15:44:19	Gathering message types
+08/10/2023 15:44:19	Gathering queues
+08/10/2023 15:44:19	Gathering contracts
+08/10/2023 15:44:19	Gathering services
+08/10/2023 15:44:19	Gathering event notifications
+08/10/2023 15:44:19	Gathering remote service bindings
+08/10/2023 15:44:19	Gathering broker priorities
+08/10/2023 15:44:19	Gathering signatures
+08/10/2023 15:44:19	Gathering compression options
+08/10/2023 15:44:19	Gathering sequence types
+08/10/2023 15:44:19	Gathering security policies
+08/10/2023 15:44:19	Gather column encryption keys
+08/10/2023 15:44:19	Gathering column master keys
+08/10/2023 15:44:19	Gathering external data sources
+08/10/2023 15:44:19	Gathering external file formats
+08/10/2023 15:44:19	Gathering external tables
+08/10/2023 15:44:19	Gathering XML index compression options
+08/10/2023 15:44:19	Gathering extended properties
+08/10/2023 15:44:19	Gathering assemblies
+08/10/2023 15:44:19	Gathering credentials
+08/10/2023 15:44:19	Gathering logins
+08/10/2023 15:44:19	Gathering server audits
+08/10/2023 15:44:20	Scanning project for duplicate elements
+08/10/2023 15:44:20	Finished duplicate element processing
+08/10/2023 15:44:21	Finished importing database.
+08/10/2023 15:44:21	A summary of the import was saved to the following location: D:\GIT\TourOfHeroes\TourOfHeroes.Backend\TourOfHeroes.Backend.Sql\Import Schema Logs\TourOfHeroes.Backend_20231008014413.log
+08/10/2023 15:44:21	Click Finish to continue...

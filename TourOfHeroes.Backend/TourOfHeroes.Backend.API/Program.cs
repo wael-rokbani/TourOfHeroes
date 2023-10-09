@@ -31,6 +31,13 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+app.UseCors(x => x
+                .WithOrigins(app.Configuration.GetValue<string>("AppSettings:CorsAllowedOrigins")!.Split(","))
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .SetIsOriginAllowed(origin => true)
+                .AllowCredentials());
+
 app.Run();
 
 // Needed for tests

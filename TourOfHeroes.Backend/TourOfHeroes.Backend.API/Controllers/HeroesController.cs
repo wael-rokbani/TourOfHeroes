@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Net;
+using TourOfHeroes.Backend.API.Validators;
 using TourOfHeroes.Backend.Data.Repositories.Interfaces;
 using TourOfHeroes.Backend.Entities;
 
@@ -39,8 +40,9 @@ public class HeroesController : ControllerBase
     [ProducesResponseType(typeof(Hero), (int)HttpStatusCode.Created)]
     public IActionResult CreateHero([FromBody] Hero hero)
     {
-        //TODO 
-        //Data validation
+        if (!hero.IsValid())
+            throw new BadHttpRequestException("Invalid Hero data");
+
         return Created("TODO", _heroRepository.Create(hero));
     }
 
@@ -48,8 +50,9 @@ public class HeroesController : ControllerBase
     [ProducesResponseType(typeof(Hero), (int)HttpStatusCode.OK)]
     public IActionResult UpdateHero(int id, [FromBody] Hero hero)
     {
-        //TODO 
-        //Data validation
+        if (!hero.IsValid())
+            throw new BadHttpRequestException("Invalid Hero data");
+
         return Ok(_heroRepository.Update(hero));
     }
 

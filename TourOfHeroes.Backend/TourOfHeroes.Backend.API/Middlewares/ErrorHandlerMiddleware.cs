@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+﻿using System.Net;
+using System.Text.Json;
 
 namespace TourOfHeroes.Backend.API.Middlewares;
 
@@ -27,10 +28,21 @@ public class ErrorHandlerMiddleware
     {
         var response = context.Response;
 
-        //TODO Custom Error Handling
+        string error;
+
+        if (exception is BadHttpRequestException)
+        {
+            response.StatusCode = (int)HttpStatusCode.BadRequest;
+            error = exception.Message;
+        }
+        else
+        {
+            response.StatusCode = (int)HttpStatusCode.InternalServerError;
+            error = "Unhandled error : " + exception.Message;
+        }
 
         response.ContentType = "application/json";
-        var result = JsonSerializer.Serialize(exception);
+        var result = JsonSerializer.Serialize(error);
         await response.WriteAsync(result);
     }
 }

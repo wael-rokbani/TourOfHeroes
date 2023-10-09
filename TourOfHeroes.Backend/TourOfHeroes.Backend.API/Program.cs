@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using TourOfHeroes.Backend.API.Middlewares;
 using TourOfHeroes.Backend.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +15,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+app.UseMiddleware<ErrorHandlerMiddleware>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

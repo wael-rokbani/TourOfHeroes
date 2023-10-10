@@ -15,17 +15,16 @@
 }
 
 .layoutContainer {
-display: flex;
-flex-direction: column;
-flex-wrap: wrap;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-.sideBar{
-
+.sideBar {
 }
 
-.mainContainer{
+.mainContainer {
   padding-top: 20px;
 }
 
@@ -35,7 +34,7 @@ a {
   text-decoration: inherit;
 }
 
-.heroItem{
+.heroItem {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -46,15 +45,30 @@ a {
   color: white;
 }
 
-.heroData{
+.heroData {
   display: flex;
 }
-.actions{
+.actions {
   margin-right: 15px;
-
- 
 }
 
+.typeSelect {
+  width: 100%;
+}
+
+.previewHero {
+  color: rgb(0, 191, 0);
+  cursor: pointer;
+}
+
+.deleteHero {
+  color: rgb(242, 0, 0);
+  cursor: pointer;
+}
+
+.btn {
+  margin: 5px;
+}
 .actions * {
   margin-right: 15px;
 }

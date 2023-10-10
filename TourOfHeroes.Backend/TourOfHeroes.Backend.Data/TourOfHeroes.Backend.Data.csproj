@@ -25,4 +25,8 @@
     <ProjectReference Include="..\TourOfHeroes.Backend.Entities\TourOfHeroes.Backend.Entities.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
 </Project>

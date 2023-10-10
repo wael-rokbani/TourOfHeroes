@@ -12,7 +12,12 @@ public class TourOfHeroesContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<HeroType>().ToTable("HeroType", "sHero").HasKey(k => k.Id);
-        modelBuilder.Entity<Hero>().ToTable("Hero", "sHero").HasKey(k => k.Id);
+        modelBuilder.Entity<HeroType>()
+            .ToTable("HeroType", "sHero")
+            .HasKey(k => k.Id);
+
+        modelBuilder.Entity<Hero>()
+            .ToTable("Hero", "sHero")
+            .HasKey(k => k.Id);
     }
 }

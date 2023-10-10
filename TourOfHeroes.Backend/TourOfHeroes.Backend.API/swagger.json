@@ -288,6 +288,10 @@
           },
           "type": {
             "$ref": "#/components/schemas/HeroType"
+          },
+          "typeId": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false

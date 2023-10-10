@@ -1,24 +1,23 @@
- import {Outlet, Link} from "react-router-dom"
+import { Outlet, Link } from "react-router-dom";
 
 export default function Layout() {
   return (
     <div className="layoutContainer">
-       <div className="sideBar">
+      <div className="sideBar">
         <nav>
-            <ul>
+          <ul>
             <li>
-                <Link to="/">Dashboard</Link>
+              <Link to="/">Dashboard</Link>
             </li>
             <li>
-                <Link to="/Heroes">Heroes list</Link>
+              <Link to="/Heroes">Heroes list</Link>
             </li>
-            </ul>
+          </ul>
         </nav>
-       </div>
-       <div className="mainContainer">
-       <Outlet />
-       </div>
-        
+      </div>
+      <div className="mainContainer">
+        <Outlet />
+      </div>
     </div>
-  )
+  );
 }

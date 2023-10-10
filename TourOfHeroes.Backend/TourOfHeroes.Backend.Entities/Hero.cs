@@ -11,5 +11,8 @@ public class Hero
 
     public string? DisplayName { get; set; }
 
+    [ForeignKey("TypeId")]
     public required HeroType Type { get; set; }
+
+    public int TypeId { get; set; }
 }

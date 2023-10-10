@@ -1,4 +1,5 @@
-﻿using TourOfHeroes.Backend.Data.Repositories.Interfaces;
+﻿using Microsoft.EntityFrameworkCore;
+using TourOfHeroes.Backend.Data.Repositories.Interfaces;
 using TourOfHeroes.Backend.Entities;
 
 namespace TourOfHeroes.Backend.Data.Repositories.Implementations
@@ -15,6 +16,7 @@ namespace TourOfHeroes.Backend.Data.Repositories.Implementations
         public Hero Create(Hero hero)
         {
             _context.Heroes.Add(hero);
+            _context.Entry(hero.Type).State = EntityState.Unchanged;
             _context.SaveChanges();
 
             return hero;
@@ -27,6 +29,8 @@ namespace TourOfHeroes.Backend.Data.Repositories.Implementations
             if (heroToRemove != null)
                 _context.Heroes.Remove(heroToRemove);
 
+            _context.SaveChanges();
+
             return true;
         }
 
@@ -37,7 +41,7 @@ namespace TourOfHeroes.Backend.Data.Repositories.Implementations
 
         public Hero? GetById(int id)
         {
-            return _context.Heroes.Find(id);
+            return _context.Heroes.Include(h => h.Type).FirstOrDefault(h => h.Id == id);
         }
 
         public IEnumerable<Hero> Search(string searchValue)
@@ -48,6 +52,7 @@ namespace TourOfHeroes.Backend.Data.Repositories.Implementations
         public Hero Update(Hero hero)
         {
             _context.Update(hero);
+            _context.Entry(hero.Type).State = EntityState.Unchanged;
             _context.SaveChanges();
             return hero;
         }

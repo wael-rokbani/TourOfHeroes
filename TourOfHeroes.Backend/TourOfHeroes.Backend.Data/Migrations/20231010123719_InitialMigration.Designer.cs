@@ -11,7 +11,7 @@ using TourOfHeroes.Backend.Data;
 namespace TourOfHeroes.Backend.Data.Migrations
 {
     [DbContext(typeof(TourOfHeroesContext))]
-    [Migration("20231005134233_InitialMigration")]
+    [Migration("20231010123719_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />

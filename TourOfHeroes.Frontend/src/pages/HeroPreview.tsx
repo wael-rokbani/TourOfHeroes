@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Hero, HeroesService } from "../generated";
+import { AppContext } from "../AppContext";
 
 type heroParams = { id: string | undefined };
 
@@ -19,10 +20,16 @@ export const HeroPreview = () => {
 
   const navigate = useNavigate();
 
+  const { lastViewedHeroes, setLastViewedHeroes } = useContext(AppContext);
+
+  //const { lastViewedHeroes, setLastViewedHeroes} = useContext(AppContext);
+
   useEffect(() => {
     const loadData = async () => {
       const result = await HeroesService.getApiV1Heroes1(heroId);
       setHero(result);
+
+      setLastViewedHeroes([result, ...lastViewedHeroes]);
     };
 
     if (!isNew) loadData();
